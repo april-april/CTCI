@@ -12,3 +12,10 @@ def sort_scores(unsorted_scores, highest_possible_score):
     # For each item in score_counts
     for score in xrange(len(score_counts) - 1, -1, -1):
         count = score_counts[score]
+
+        # For the number of times the item occurs
+        for time in xrange(count):
+            # Add it to the sorted list
+            sorted_scores.append(score)
+
+    return sorted_scores
