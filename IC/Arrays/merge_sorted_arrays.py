@@ -15,3 +15,5 @@ def merge_lists(first_list, second_list):
     current_index_alices = 0
     current_index_mine = 0
     current_index_merged = 0
+
+    #TO BE CONTINUED
