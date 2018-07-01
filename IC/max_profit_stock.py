@@ -1,4 +1,4 @@
-  def get_max_profit(stock_prices):
+def get_max_profit(stock_prices):
     if len(stock_prices) < 2:
         raise ValueError('Getting a profit requires at least 2 prices')
 
@@ -27,4 +27,4 @@
         # the lowest price we've seen so far
         min_price  = min(min_price, current_price)
 
-    return max_profit
+    return max_profi  t

@@ -1,4 +1,4 @@
-  def merge_ranges(meetings):
+def merge_ranges(meetings):
     # Sort by start time
     sorted_meetings = sorted(meetings)
 
@@ -18,4 +18,4 @@
             # Add the current meeting since it doesn't overlap
             merged_meetings.append((current_meeting_start, current_meeting_end))
 
-    return merged_meetings
+    return merged_meetings  

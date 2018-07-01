@@ -14,3 +14,10 @@ def find_rotation_point(words):
         else:
             # Go left
             ceiling_index = guess_index
+
+
+        # If floor and ceiling have converged
+        if floor_index + 1 == ceiling_index:
+            # Between floor and ceiling is where we flipped to the beginning
+            # so ceiling is alphabetically first
+            return ceiling_index 

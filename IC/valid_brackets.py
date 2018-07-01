@@ -1,4 +1,4 @@
-  def is_valid(code):
+def is_valid(code):
     openers_to_closers = {
         '(' : ')',
         '{' : '}',
@@ -21,4 +21,4 @@
                 if not openers_to_closers[last_unclosed_opener] == char:
                     return False
 
-    return openers_stack == []
+    return openers_stack == []  

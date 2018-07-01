@@ -1,3 +1,5 @@
+#O(n)
+
 def can_two_movies_fill_flight(movie_lengths, flight_length):
     # set for movie lengths you have seen so far
     movie_lengths_seen = set()
