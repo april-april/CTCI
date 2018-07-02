@@ -1,6 +1,11 @@
 from pythonds.graphs import Graph
 
 #Source: book
+#BFS = queue, DFS = stack**
+
+#You don’t see a stack in the code, 
+#but it is implicit in the recursive call to dfsvisit
+
 
 class DFSGraph(Graph):
     def __init__(self):
