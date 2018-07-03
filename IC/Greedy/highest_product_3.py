@@ -37,4 +37,10 @@ def highest_product_of_3(list_of_ints):
                                   current * highest,
                                   current * lowest)
 
+        # Do we have a new highest?
+        highest = max(highest, current)
+
+        # Do we have a new lowest?
+        lowest = min(lowest, current)
+
     return highest_product_of_3
