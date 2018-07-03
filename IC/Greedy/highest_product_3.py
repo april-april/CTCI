@@ -16,6 +16,25 @@ def highest_product_of_3(list_of_ints):
     highest_product_of_3 = list_of_ints[0] * list_of_ints[1] * list_of_ints[2]
 
     # Walk through items, starting at index 2
-    #TO BE CONTINUED
+    for i in xrange(2, len(list_of_ints)):
+        current = list_of_ints[i]
+
+        # Do we have a new highest product of 3?
+        # It's either the current highest,
+        # or the current times the highest product of two
+        # or the current times the lowest product of two
+        highest_product_of_3 = max(highest_product_of_3,
+                                   current * highest_product_of_2,
+                                   current * lowest_product_of_2)
+
+        # Do we have a new highest product of two?
+        highest_product_of_2 = max(highest_product_of_2,
+                                   current * highest,
+                                   current * lowest)
+
+        # Do we have a new lowest product of two?
+        lowest_product_of_2 = min(lowest_product_of_2,
+                                  current * highest,
+                                  current * lowest)
 
     return highest_product_of_3
