@@ -24,6 +24,7 @@ def find_repeat_brute_force(numbers):
     # no duplicate
     raise Exception('no duplicate!')
 
+
 #Optimize for better space and time
 
 
