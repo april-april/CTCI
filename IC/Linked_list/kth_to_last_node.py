@@ -21,3 +21,26 @@ d.next = e
 kth_to_last_node(2, a)
 
 '''
+
+def kth_to_last_node(k, head):
+    # Step 1: get the length of the list
+    # Start at 1, not 0
+    # else we'd fail to count the head node!
+    list_length = 1
+    current_node = head
+
+    # Traverse the whole list,
+    # counting all the nodes
+    while current_node.next:
+        current_node = current_node.next
+        list_length += 1
+
+    # Step 2: walk to the target node
+    # Calculate how far to go, from the head,
+    # to get to the kth to last node
+    how_far_to_go = list_length - k
+    current_node = head
+    for i in xrange(how_far_to_go):
+        current_node = current_node.next
+
+    return current_node
