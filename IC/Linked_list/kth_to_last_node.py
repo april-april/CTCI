@@ -44,3 +44,24 @@ def kth_to_last_node(k, head):
         current_node = current_node.next
 
     return current_node
+
+#Optimized solution, two pointer technique
+def kth_to_last_node(k, head):
+    left_node  = head
+    right_node = head
+
+    # Move right_node to the kth node
+    for _ in xrange(k - 1):
+        right_node = right_node.next
+
+    # Starting with left_node on the head,
+    # move left_node and right_node down the list,
+    # maintaining a distance of k between them,
+    # until right_node hits the end of the list
+    while right_node.next:
+        left_node  = left_node.next
+        right_node = right_node.next
+
+    # Since left_node is k nodes behind right_node,
+    # left_node is now the kth to last node!
+    return left_node
