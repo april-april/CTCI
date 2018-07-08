@@ -12,3 +12,4 @@ def get_closing_paren(sentence, opening_paren_index):
             else:
                 open_nested_parens -= 1
 
+    raise Exception("No closing parenthesis :(")
