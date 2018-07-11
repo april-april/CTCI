@@ -5,7 +5,9 @@ function sayMessage(){
     // even though it's declared outside this function!
 };
 
-//example #2
+//example #2 
+//putting nextGeneratedId in an IIFE makes
+// nextGeneratedId private and not available in the global scope
 var getUniqueId = (function(){
     var nextGeneratedId = 0;
     return function(element) {

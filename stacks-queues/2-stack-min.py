@@ -1,3 +1,5 @@
+#stack that returns the minimum element
+
 class MultiStack:
 
     def __init__(self, stacksize):
