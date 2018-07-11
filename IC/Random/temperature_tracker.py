@@ -14,6 +14,9 @@ class TempTracker(object):
         # For min and max
         self.min_temp = float('inf')
         self.max_temp = float('-inf')
+
+    def insert(self, temperature):
+        #to be determined
     
     def get_max(self):
         return self.max_temp
