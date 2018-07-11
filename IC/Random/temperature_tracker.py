@@ -16,7 +16,16 @@ class TempTracker(object):
         self.max_temp = float('-inf')
 
     def insert(self, temperature):
-        #to be determined
+        # For mode
+        self.occurrences[temperature] += 1
+        if self.occurrences[temperature] > self.max_occurrences:
+            self.mode = temperature
+            self.max_occurrences = self.occurrences[temperature]
+
+        # For mean
+        self.number_of_readings += 1
+        self.total_sum += temperature
+        self.mean = self.total_sum / self.number_of_readings
     
     def get_max(self):
         return self.max_temp
