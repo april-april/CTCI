@@ -14,3 +14,17 @@ class TempTracker(object):
         # For min and max
         self.min_temp = float('inf')
         self.max_temp = float('-inf')
+    
+    def get_max(self):
+        return self.max_temp
+
+    def get_min(self):
+        return self.min_temp
+    
+    def get_mean(self):
+        return self.mean
+
+    def get_mode(self):
+        return self.mode
+
+    
