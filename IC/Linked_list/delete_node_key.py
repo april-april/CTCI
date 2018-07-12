@@ -13,8 +13,12 @@ def delete_node(head, key):
                 prev.next = current.next
                 current = current.next
       
-    else:
-        prev = current
-        current = current.next
+        else:
+            prev = current
+            current = current.next
+
+    # key not found in list        
+    if current == None:
+        return head
 
     return head
