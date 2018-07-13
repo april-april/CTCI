@@ -1,15 +1,35 @@
-def remove_duplicates(s):
+from array import array
 
-    hashset = set([])
+def remove_duplicates(str):
+
     write_index = 0
-    read_index = 0
 
-    while s[read_index] != '\0':
-        if s[read_index] not in hashset:
-            hashset.add(s[read_index])
-            s[write_index] = s[read_index]
+    for i in range(len(str)):
+        found = False
+
+
+        for j in range(0, write_index):
+            if str[i] == str[j]:
+                found = True
+                break
+
+        
+        if found == False:
+            str[write_index] = str[i]
             write_index += 1
+        
+    str[write_index] = '\0'
 
-        read_index += 1
+    return str
+
+def getArray(t):
+    s = array('c', t)
+    s.append('\0')
+    print s
+    return s
+
+def main():
+    test = 'aaaaabbbbccc'
+    print remove_duplicates(getArray(test))
+    print test
     
-    s[write_index] = '\0'
