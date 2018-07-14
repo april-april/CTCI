@@ -29,3 +29,15 @@ class stack_using_queue:
         self.queue3 = self.queue1
         self.queue1 = self.queue2
         self.queue2 = self.queue3 
+
+
+def main():
+    sq = stack_using_queue()
+    sq.push(1)
+    sq.push(2)
+    print sq.pop() 
+
+    sq.push(3)
+    print sq.pop()
+
+main() 
