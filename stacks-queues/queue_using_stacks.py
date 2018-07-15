@@ -24,3 +24,17 @@ class queue_using_stack:
         val = self.stack2[-1]
         self.stack2.pop()
         return val
+
+def main():
+    q1 = queue_using_stack()
+    q1.enqueue(1)
+    q1.enqueue(2)
+    q1.enqueue(3)
+    print q1.dequeue()
+
+    q1.enqueue(4)
+    print q1.dequeue()
+    print q1.dequeue()
+    print q1.dequeue()
+
+main()
