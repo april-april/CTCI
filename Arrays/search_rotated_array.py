@@ -26,3 +26,15 @@ def binary_search(arr, st, end, key):
 
     return -1
 
+def binary_search_rotated(arr, key):
+    return binary_search(arr, 0, len(arr)-1, key)
+
+def main():
+    v1 = [6, 7, 1, 2, 3, 4, 5]
+    #Key(3) for Binary Search found at:4
+    print("Key(3) for Binary Search found at:" + str(binary_search_rotated(v1, 3))),
+
+    v2 = [4, 5, 6, 1, 2, 3]
+    print("Key(6) for Binary Search found at:" + str(binary_search_rotated(v2, 6)))
+
+main()
