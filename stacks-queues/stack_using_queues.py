@@ -35,9 +35,10 @@ def main():
     sq = stack_using_queue()
     sq.push(1)
     sq.push(2)
+    sq.push(3)
     print sq.pop() 
 
-    sq.push(3)
+    sq.push(4)
     print sq.pop()
 
 main() 
