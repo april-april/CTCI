@@ -26,3 +26,5 @@ def swap_nth_node(head, n):
     temp = head.next
     head.next = current.next
     current.next = temp
+
+    return current
