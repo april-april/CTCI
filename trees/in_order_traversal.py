@@ -13,5 +13,8 @@ def inorder_iterative(root):
             root = root.left
             continue
 
+            
+        print str(stk[-1].data) + " ",
         root = stack[-1].right
         stack.pop()
+
