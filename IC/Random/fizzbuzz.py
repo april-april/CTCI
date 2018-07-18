@@ -10,7 +10,7 @@ def FizzBuzz(n):
         else:
             print(num)
 
-main():
-FizzBuzz()
+def main():
+    FizzBuzz(100)
 
 main()
