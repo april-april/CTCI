@@ -14,3 +14,4 @@ stack.appendleft(10)
 print stack
 stack.popleft()
 print stack
+print stack[-1]
