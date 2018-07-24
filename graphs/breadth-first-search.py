@@ -14,6 +14,7 @@ def breadth_first_search(graph, root):
                 seen.add(neighbour) 
                 queue.append(neighbour)
                 print(seen)
+                
     return seen 
 
 
