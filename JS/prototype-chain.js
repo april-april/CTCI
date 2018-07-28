@@ -1,3 +1,5 @@
+// prototype chain example from MDN
+
 let gold = {a: 1};
 console.log(gold.a);
 console.log(gold.z)
@@ -18,7 +20,7 @@ Person.prototype.greet = function() {
     }
 };
   
-  let Employee = function(name, title) {
+let Employee = function(name, title) {
     Person.call(this, name);
     this.title = title;
 };
