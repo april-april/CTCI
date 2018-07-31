@@ -15,3 +15,8 @@ def move_zeros_to_left(A):
             write_index -= 1
 
         read_index -= 1
+
+    while(write_index >= 0):
+        A[write_index] = 0
+        write_index -= 1
+
