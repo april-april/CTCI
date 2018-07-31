@@ -8,3 +8,10 @@ def move_zeros_to_left(A):
     length = len(A)
     write_index = length - 1
     read_index = length - 1
+
+    while(read_index >= 0):
+        if A[read_index] != 0:
+            A[write_index] = A[read_index]
+            write_index -= 1
+
+        read_index -= 1
