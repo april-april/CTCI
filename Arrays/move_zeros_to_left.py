@@ -23,6 +23,6 @@ def move_zeros_to_left(arr):
 def main():
     test = [1, 10, -1, 11, 5, 0, -7, 0, 25, -35]
     move_zeros_to_left(test)
-    print(test)
+    print(test) # [0, 0, 1, 10, -1, 11, 5, -7, 25, -35]
 
 main()
