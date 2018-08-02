@@ -3,29 +3,29 @@ function Product(name, price) {
     this.price = price;
   }
   
-  function Food(name, price) {
+function Food(name, price) {
     Product.call(this, name, price);
     this.category = 'food';
   }
   
-  function Toy(name, price) {
+function Toy(name, price) {
     Product.call(this, name, price);
     this.category = 'toy';
   }
   
-  var pizza = new Food('peppppporoni', 5);
-  var fun = new Toy('car', 30);
+var pizza = new Food('peppppporoni', 5);
+var fun = new Toy('car', 30);
 
 
   // --------------------------------------------
 
-  function greet() {
+function greet() {
     var reply = [this.animal, 'typically sleep between', this.sleepDuration].join(' ');
     console.log(reply);
   }
   
-  var obj = {
+var obj = {
     animal: 'cats', sleepDuration: '12 and 16 hours'
   };
   
-  greet.call(obj);  // cats typically sleep between 12 and 16 hours
+greet.call(obj);  // cats typically sleep between 12 and 16 hours
