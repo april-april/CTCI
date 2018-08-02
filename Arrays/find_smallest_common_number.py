@@ -12,6 +12,14 @@ def find_smallest_common_number(a,b,c):
         #found smallest common number
         if a[i] == b[j] and b[j] == c[k]:
             return a[i]
+        
+        # move iterator forward
 
+        if a[i] <= b[j] and a[i] <= c[k]:
+            i += 1
+        elif b[j] <= a[i] and b[j] <= c[k]:
+            j += 1
+        elif c[k] <= a[i] and c[k] <= b[j]:
+            k += 1
 
-    return
+    return None
