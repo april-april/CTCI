@@ -11,5 +11,5 @@ var closures = baz();
 console.log(
     closures.foo(), // 2
     closures.bar(), // 1
-    closures.foo()  //2
+    closures.foo()  // 2
 );
