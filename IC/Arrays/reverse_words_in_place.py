@@ -1,4 +1,4 @@
-  def reverse_words(message):
+def reverse_words(message):
     # First we reverse all the characters in the entire message
     reverse_characters(message, 0, len(message)-1)
 
@@ -29,3 +29,8 @@ def reverse_characters(message, left_index, right_index):
             message[right_index], message[left_index]
         left_index  += 1
         right_index -= 1
+
+def main():
+    new_string = reverse_words("Kiki, do you love me")
+
+main()
