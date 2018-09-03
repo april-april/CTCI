@@ -18,8 +18,8 @@ def string_compression(regular_string):
 
     if len(compressed_string) < len(regular_string):
         return compressed_string
-    else:
-        return regular_string
+    
+    return regular_string
         
 if __name__ == "__main__":
     test_string = 'aaaassd'
