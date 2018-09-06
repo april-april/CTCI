@@ -18,3 +18,9 @@ def inorder_iterative(root):
         root = stack[-1].right
         stack.pop()
 
+def preorder(tree):
+    if tree:
+        print(tree.getRootVal())
+        preorder(tree.getLeftChild())
+        preorder(tree.getRightChild())
+
