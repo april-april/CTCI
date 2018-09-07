@@ -1,6 +1,7 @@
 # A class that represents an individual node in a
 # Binary Tree
 class Node:
+
 	def __init__(self,key):
 		self.left = None
 		self.right = None
@@ -8,7 +9,7 @@ class Node:
 
 # A function to do inorder tree traversal
 def printInorder(root):
-    
+
 	if root:
 		# First recur on left child
 		printInorder(root.left)
@@ -21,6 +22,7 @@ def printInorder(root):
 
 #Python book version
 def inorder(tree):
+
     if tree != None:
         inorder(tree.getLeftChild())
         print(tree.getRootVal())
@@ -41,7 +43,35 @@ def printPostorder(root):
 
 #book variation
 def postorder(tree):
+
     if tree != None:
         postorder(tree.getLeftChild())
         postorder(tree.getRightChild())
         print(tree.getRootVal())
+
+# preorder tree traversal
+def printPreorder(root):
+
+	if root:
+		# First print the data of node
+		print(root.val),
+
+		# Then recur on left child
+		printPreorder(root.left)
+
+		# Finally recur on right child
+		printPreorder(root.right)
+
+# book variation
+def preorder(self):
+
+    print(self.key)
+    if self.leftChild:
+        self.leftChild.preorder()
+    if self.rightChild:
+        self.rightChild.preorder()
+
+
+
+
+
