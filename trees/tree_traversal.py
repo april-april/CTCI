@@ -8,9 +8,8 @@ class Node:
 
 # A function to do inorder tree traversal
 def printInorder(root):
-
+    
 	if root:
-
 		# First recur on left child
 		printInorder(root.left)
 
@@ -26,3 +25,23 @@ def inorder(tree):
         inorder(tree.getLeftChild())
         print(tree.getRootVal())
         inorder(tree.getRightChild())
+
+# A function to do postorder tree traversal
+def printPostorder(root):
+
+	if root:
+		# First recur on left child
+		printPostorder(root.left)
+
+		# the recur on right child
+		printPostorder(root.right)
+
+		# now print the data of node
+		print(root.val)
+
+#book variation
+def postorder(tree):
+    if tree != None:
+        postorder(tree.getLeftChild())
+        postorder(tree.getRightChild())
+        print(tree.getRootVal())
